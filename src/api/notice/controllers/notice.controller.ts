@@ -12,6 +12,7 @@ export class NoticeController {
     constructor(private noticeService: NoticeService) {
 
     }
+    
     @Post()
     @UseGuards(JwtAuthGuard)
     create(@Body() dto: CreateNoticeReqDto, @Req() request: any) {
